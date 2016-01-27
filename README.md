@@ -1,0 +1,1 @@
+A test program to get inotify working from mojolicious.

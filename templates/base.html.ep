@@ -1,0 +1,17 @@
+% layout 'default';
+%= form_for execute => begin
+    Random:
+    %= select_field count => [qw(1 10 20)]
+    %= submit_button 'Submit', name => 'cmd', value => 'Random'
+    <br>
+    %= submit_button 'Submit', name => 'cmd', value => 'Play'
+    %= submit_button 'Submit', name => 'cmd', value => 'Pause'
+    %= submit_button 'Submit', name => 'cmd', value => 'Skip'
+    %= submit_button 'Submit', name => 'cmd', value => 'Vol +'
+    %= submit_button 'Submit', name => 'cmd', value => 'Vol -'
+    % if (stash 'message') {
+        <p>
+        <%= stash 'message' %>
+	<br><br>
+    % }
+% end
