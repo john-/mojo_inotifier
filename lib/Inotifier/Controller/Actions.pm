@@ -10,12 +10,11 @@ sub base {
 }
 
 sub wsinit {
-    my $self => shift;
+    my $self = shift;
     $self->on(message => sub {
         $self->app->log->debug( 'websocket opened' );
         $self->send( {json => {fu => 'bar'}} );
     });
-
 }
 
 1;
