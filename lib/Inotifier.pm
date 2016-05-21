@@ -8,13 +8,13 @@ use Inotifier::Model::FileWatch;
 sub startup {
     my $self = shift;
 
-    $self->secrets(['A secret for you']);
+    $self->secrets( ['A secret for you'] );
 
     # Router
     my $r = $self->routes;
 
-    $r->any('/')->to(controller => 'actions', action => 'base');
-    $r->websocket('/wsinit')->to(controller => 'actions', action => 'wsinit');
+    $r->any('/')->to( controller => 'actions', action => 'base' );
+    $r->websocket('/wsinit')->to( controller => 'actions', action => 'wsinit' );
 }
 
 1;
