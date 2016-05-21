@@ -2,6 +2,7 @@ package Inotifier;
 use Mojo::Base 'Mojolicious';
 use Mojo::Log;
 
+use Inotifier::Model::FileWatch;
 
 # This method will run once at server start
 sub startup {
